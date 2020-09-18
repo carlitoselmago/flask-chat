@@ -5,3 +5,5 @@ coverage
 flask-wtf
 flask-login
 passlib
+pymysql
+hashlib

@@ -2,6 +2,12 @@ from app import db
 from sqlalchemy.sql import func
 from passlib.hash import pbkdf2_sha256
 
+ACCESS = {
+    'guest': 0,
+    'user': 1,
+    'admin': 2
+}
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
